@@ -2,12 +2,12 @@
 # FOR: Android -> Termux
 
 [starship]
-pkg install starship
+curl -fsSL https://starship.rs/install.sh | sh -s -- -y
 curl https://raw.githubusercontent.com/NghiepPham-96/fancy-terminal/android-termux/starship.toml -o ~/.config/starship.toml
 
-[Andoird-Termux]
-sudo apt update
-sudo apt install gcc-10 -y
+[Ubuntu]
+sudo apt-get update
+sudo apt-get install gcc -y
 
 [Rust]
 # Install rust and cargo
