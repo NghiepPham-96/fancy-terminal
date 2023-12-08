@@ -23,7 +23,7 @@ if [ -f /etc/debian_version ]; then
 elif [ -f /etc/alpine-release ]; then
     echo "Đây là Apline, tiến hành cài đặt!"
     apk update
-    apk install gcc -y
+    apk install gcc
 else
     #Check khong phai la Ubuntu | Alpine
     #Con lai la Centos/Redhat | khác
