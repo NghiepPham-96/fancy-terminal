@@ -10,7 +10,7 @@ fi
 
 # [starship]
 curl -fsSL https://starship.rs/install.sh | sh -s -- -y
-curl https://raw.githubusercontent.com/NghiepPham-96/fancy-terminal/android-termux/starship.toml -o ~/.config/starship.toml
+curl https://raw.githubusercontent.com/NghiepPham-96/fancy-terminal/main/starship.toml -o ~/.config/starship.toml
 
 #Check differentiate between Ubuntu and other Linux platforms 
 if [ -f /etc/debian_version ]; then
