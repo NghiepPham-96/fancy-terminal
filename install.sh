@@ -33,7 +33,7 @@ fi
 
 # [Rust]
 # Install rust and cargo
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -1
 
 # [=exa=]
 cargo install exa
