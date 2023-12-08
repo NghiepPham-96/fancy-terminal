@@ -34,11 +34,11 @@ $memory_usage\
 
 # Disable the blank line at the start of the prompt
 add_newline = false
-# Replace the \'❯\' symbol in the prompt with \'➜\'
-[character] # The name of the module we are configuring is \'character\'
-success_symbol = \'[➜](bold green)\' # The \'success_symbol\' segment is being set to \'➜\' with the color \'bold green\'
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 # A continuation prompt that displays two filled in arrows
-continuation_prompt = \'▶▶ \'
+continuation_prompt = '▶▶ '
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
@@ -46,7 +46,7 @@ continuation_prompt = \'▶▶ \'
 show_always = true
 style_user = "bg:#9A348E"
 style_root = "bg:#9A348E"
-format = \'[$user ]($style)\'
+format = '[$user ]($style)'
 disabled = false
 
 # An alternative to the username module which displays a symbol that
@@ -129,83 +129,83 @@ truncation_symbol = "…/"
 [c]
 # symbol = " "
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
 # symbol = " "
 style = "bg:#06969A"
-format = \'[ $symbol $context ]($style) $path\'
+format = '[ $symbol $context ]($style) $path'
 
 [elixir]
 # symbol = " "
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [elm]
-symbol = " "
+# symbol = " "
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
 style = "bg:#FCA17D"
-format = \'[ $symbol $branch ]($style)\'
+format = '[ $symbol $branch ]($style)'
 
 [git_status]
 style = "bg:#FCA17D"
-format = \'[$all_status$ahead_behind ]($style)\'
+format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 # symbol = " "
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [gradle]
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [haskell]
 # symbol = " "
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [java]
 # symbol = " "
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [julia]
 # symbol = " "
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 # symbol = ""
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [nim]
 # symbol = "󰆥 "
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [rust]
 # symbol = ""
 style = "bg:#86BBD8 fg:#3B3B3B"
-format = \'[ $symbol\(Rust\) ($version) ]($style)\'
+format = '[ $symbol\(Rust\) ($version) ]($style)'
 
 [php]
 # symbol = ""
 style = "bg:#86BBD8 fg:#3B3B3B"
-format = \'[ $symbol\(PHP\) ($version) ]($style)\'
+format = '[ $symbol\(PHP\) ($version) ]($style)'
 
 [scala]
 # symbol = " "
 style = "bg:#86BBD8"
-format = \'[ $symbol ($version) ]($style)\'
+format = '[ $symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
-format = \'[  $time ]($style)\'
+format = '[  $time ]($style)'
