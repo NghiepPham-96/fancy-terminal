@@ -38,9 +38,12 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -1
 # [=exa=]
 cargo install exa
 
+# [bash]
+echo 'eval "$(starship init bash)"' > /etc/profile.d/starship.sh
+source /etc/profile.d/starship.sh
 # [bash alias]
 echo "# More alias to upgrade 'ls'" >> /etc/profile.d/alias.sh
 echo "alias ll='exa -abghHlFiS --icons --group-directories-first --git'" >> /etc/profile.d/alias.sh
 echo "alias l='exa --icons -F -H --group-directories-first --git -1'" >> /etc/profile.d/alias.sh
 echo "alias ltree='exa --long --tree --icons --group-directories-first'" >> /etc/profile.d/alias.sh
-. /etc/profile.d/alias.sh
+source /etc/profile.d/alias.sh
