@@ -46,7 +46,7 @@ if ! command -v cargo &> /dev/null; then
         echo "Cargo could not be found.. Installing Cargo"
     
         # Install rust and cargo
-        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -1
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     fi
 
     cargo install exa
