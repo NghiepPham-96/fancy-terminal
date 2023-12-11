@@ -38,7 +38,7 @@ else
 fi
 
 # [=exa=]
-if ! command -v cargo &> /dev/null; then
+if ! command -v exa &> /dev/null; then
     echo "exa could not be found.. Installing exa the mordern 'ls'"
 
     # [Rust]
