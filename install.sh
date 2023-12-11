@@ -28,7 +28,7 @@ elif [ -f /etc/alpine-release ]; then
 
     if ! apk list gcc &> /dev/null; then
         apk update
-        apk add gcc
+        apk add build-base
     fi
 else
     #Check khong phai la Ubuntu | Alpine
