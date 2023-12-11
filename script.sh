@@ -9,7 +9,7 @@ if [ $user -ne 0 ]; then
 fi
 
 # [starship]
-curl -fsSL https://starship.rs/install.sh | sh -s -- -y
+curl https://raw.githubusercontent.com/NghiepPham-96/fancy-terminal/main/install.sh | sh -s -- -y
 mkdir -p ~/.config/ && \
 touch ~/.config/starship.toml && \
 curl https://raw.githubusercontent.com/NghiepPham-96/fancy-terminal/main/starship.toml -o ~/.config/starship.toml
