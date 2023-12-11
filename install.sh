@@ -18,12 +18,18 @@ curl https://raw.githubusercontent.com/NghiepPham-96/fancy-terminal/main/starshi
 if [ -f /etc/debian_version ]; then
     #Check dung la Ubuntu
     echo "Đây là Ubuntu, tiến hành cài đặt!"
-    apt-get update
-    apt-get install gcc -y
+
+    if ! apt list gcc &> /dev/null; then
+        apt-get update
+        apt-get install gcc -y
+    fi
 elif [ -f /etc/alpine-release ]; then
     echo "Đây là Apline, tiến hành cài đặt!"
-    apk update
-    apk install gcc
+
+    if ! apk list gcc &> /dev/null; then
+        apk update
+        apk add gcc
+    fi
 else
     #Check khong phai la Ubuntu | Alpine
     #Con lai la Centos/Redhat | khác
