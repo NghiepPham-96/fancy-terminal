@@ -75,15 +75,14 @@ if ! cat ~/.bashrc | grep '^.*\. ~/.bash_aliases$'; then
 #    chmod u+x ~/.bash_aliases
 fi
 
-# [bash]
-echo '#!/bin/bash' > /etc/profile.d/starship.sh
-echo 'eval "$(starship init bash)"' >> /etc/profile.d/starship.sh
-chmod 777 /etc/profile.d/starship.sh
-# . /etc/profile.d/starship.sh
-# [bash alias]
-echo "# More alias to upgrade 'ls'" > /etc/profile.d/alias.sh
-echo "alias ll='exa -abghHlFiS --icons --group-directories-first --git'" >> /etc/profile.d/alias.sh
-echo "alias l='exa --icons -F -H --group-directories-first --git -1'" >> /etc/profile.d/alias.sh
-echo "alias ltree='exa --long --tree --icons --group-directories-first'" >> /etc/profile.d/alias.sh
-chmod 777 /etc/profile.d/alias.sh
-# . /etc/profile.d/alias.sh
+# [fish]
+if ! command -v fish &> /dev/null; then
+    if [ -f ~/.config/fish/config.fish ]; then
+        echo 'starship init fish | source' >> ~/.config/fish/config.fish
+    else
+        mkdir -p ~/.config/fish
+        touch ~/.config/fish/config.fish
+        echo 'starship init fish | source' >> ~/.config/fish/config.fish
+    fi
+fi
+
