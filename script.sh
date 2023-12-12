@@ -73,6 +73,11 @@ if ! cat ~/.bashrc | grep '^.*\. ~/.bash_aliases$'; then
     echo "alias l='exa --icons -F -H --group-directories-first --git -1'" >> ~/.bash_aliases
     echo "alias ltree='exa --long --tree --icons --group-directories-first'" >> ~/.bash_aliases
 #    chmod u+x ~/.bash_aliases
+else
+    echo "# More alias to upgrade 'ls'" >> ~/.bash_aliases
+    echo "alias ll='exa -abghHlFiS --icons --group-directories-first --git'" >> ~/.bash_aliases
+    echo "alias l='exa --icons -F -H --group-directories-first --git -1'" >> ~/.bash_aliases
+    echo "alias ltree='exa --long --tree --icons --group-directories-first'" >> ~/.bash_aliases
 fi
 
 # [fish]
