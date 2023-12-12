@@ -26,6 +26,10 @@ if [ -f /etc/debian_version ]; then
     #fi
 
     apt install exa
+
+    apt-add-repository ppa:fish-shell/release-3
+    apt update
+    apt install fish
 elif [ -f /etc/alpine-release ]; then
     echo "Đây là Apline, tiến hành cài đặt!"
 
@@ -67,10 +71,10 @@ else
 fi
 
 # [fish]
-if ! command -v fish &> /dev/null; then
+if command -v fish &> /dev/null; then
     if [ -f ~/.config/fish/config.fish ]; then
         echo 'starship init fish | source' >> ~/.config/fish/config.fish
-
+    
         echo "# More alias to upgrade 'ls'" >> ~/.config/fish/config.fish
         echo "alias ll='exa -abghHlFiS --icons --group-directories-first --git'" >> ~/.config/fish/config.fish
         echo "alias l='exa --icons -F -H --group-directories-first --git -1'" >> ~/.config/fish/config.fish
@@ -79,7 +83,7 @@ if ! command -v fish &> /dev/null; then
         mkdir -p ~/.config/fish
         touch ~/.config/fish/config.fish
         echo 'starship init fish | source' >> ~/.config/fish/config.fish
-
+    
         echo "# More alias to upgrade 'ls'" >> ~/.config/fish/config.fish
         echo "alias ll='exa -abghHlFiS --icons --group-directories-first --git'" >> ~/.config/fish/config.fish
         echo "alias l='exa --icons -F -H --group-directories-first --git -1'" >> ~/.config/fish/config.fish
