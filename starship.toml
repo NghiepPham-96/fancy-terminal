@@ -110,7 +110,7 @@ format = "[ $indicator ]($style)"
 powershell_indicator = "_"
 cmd_indicator = ""
 bash_indicator = "_"
-zsh_indicator = ""
+fish_indicator = ""
 
 [directory]
 style = "bg:#DA627D"
