@@ -8,7 +8,7 @@ if [ $user -ne 0 ]; then
     exit 1
 fi
 
-# [starship]
+# [starship] Alpine >= 3.13+
 curl https://raw.githubusercontent.com/NghiepPham-96/fancy-terminal/main/install.sh | sh -s -- -y
 mkdir -p ~/.config/ && \
 touch ~/.config/starship.toml && \
