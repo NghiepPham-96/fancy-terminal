@@ -107,9 +107,9 @@ format = "MEM: $symbol [($ram_pct) $ram]($style)"
 disabled = false
 style = "bg:#9A348E"
 format = "[ $indicator ]($style)"
-powershell_indicator = ""
+powershell_indicator = "_"
 cmd_indicator = ""
-bash_indicator = ""
+bash_indicator = "_"
 
 [directory]
 style = "bg:#DA627D"
