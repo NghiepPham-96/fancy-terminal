@@ -95,6 +95,9 @@ Android = " "
 Ubuntu = " "
 # Unknown = " "
 
+[container]
+disabled = false
+
 [memory_usage]
 disabled = false
 symbol = "💽"
