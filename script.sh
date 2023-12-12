@@ -58,11 +58,6 @@ if ! cat ~/.bashrc | grep 'eval "$(starship init bash)"'; then
     echo 'eval "$(starship init bash)"' >> ~/.bashrc
 fi
 
-if ! cat ~/.bashrc | grep '. ~/.bash_aliases'; then
-    echo "Setup automatically load starship to bash terminal"
-    echo 'eval "$(starship init bash)"' >> ~/.bashrc
-fi
-
 # [bash alias]
 if ! cat ~/.bashrc | grep '^.*\. ~/.bash_aliases$'; then
     echo -en "if [ -f ~/.bash_aliases ]; then\n    . ~/.bash_aliases\nfi" >> ~/.bashrc
