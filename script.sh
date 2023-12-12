@@ -73,6 +73,7 @@ fi
 # [fish]
 if command -v fish &> /dev/null; then
     if [ -f ~/.config/fish/config.fish ]; then
+        echo "Found ~/.config/fish/config.fish"
         echo 'starship init fish | source' >> ~/.config/fish/config.fish
     
         echo "# More alias to upgrade 'ls'" >> ~/.config/fish/config.fish
@@ -80,6 +81,7 @@ if command -v fish &> /dev/null; then
         echo "alias l='exa --icons -F -H --group-directories-first --git -1'" >> ~/.config/fish/config.fish
         echo "alias ltree='exa --long --tree --icons --group-directories-first'" >> ~/.config/fish/config.fish
     else
+        echo "Not found ~/.config/fish/config.fish"
         mkdir -p ~/.config/fish
         touch ~/.config/fish/config.fish
         echo 'starship init fish | source' >> ~/.config/fish/config.fish
