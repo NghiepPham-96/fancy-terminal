@@ -1,12 +1,12 @@
 #!/bin/bash
 # FOR: Linux
 
-#Check quyen root
-user=`id | cut -d'=' -f2 | cut -d\( -f1`
-if [ $user -ne 0 ]; then
-    echo "Needs root authentication to install."
-    exit 1
-fi
+#Check quyen root (no need)
+#user=`id | cut -d'=' -f2 | cut -d\( -f1`
+#if [ $user -ne 0 ]; then
+#    echo "Needs root authentication to install."
+#    exit 1
+#fi
 
 # [starship] Alpine >= 3.13+
 curl https://raw.githubusercontent.com/NghiepPham-96/fancy-terminal/main/install.sh | sh -s -- -y
