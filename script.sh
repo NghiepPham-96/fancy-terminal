@@ -19,37 +19,28 @@ if [ -f /etc/debian_version ]; then
     #Check dung la Ubuntu
     echo "Đây là Ubuntu, tiến hành cài đặt!"
 
-    if ! apt list gcc &> /dev/null; then
-        apt-get update
-        apt-get install gcc -y
-    fi
+    # No need to install gcc for install cargo for install exa
+    #if ! apt list gcc &> /dev/null; then
+    #    apt-get update
+    #    apt-get install gcc -y
+    #fi
+
+    apt install exa
 elif [ -f /etc/alpine-release ]; then
     echo "Đây là Apline, tiến hành cài đặt!"
 
-    if ! apk list gcc &> /dev/null; then
-        apk update
-        apk add build-base
-    fi
+    #if ! apk list gcc &> /dev/null; then
+    #    apk update
+    #    apk add build-base
+    #fi
+
+    # Alpine >= 3.18
+    apk add exa
 else
     #Check khong phai la Ubuntu | Alpine
     #Con lai la Centos/Redhat | khác
     echo "Bạn da sử dụng sai bản cài đặt!"
     exit 0
-fi
-
-# [=exa=]
-if ! command -v exa &> /dev/null; then
-    echo "exa could not be found.. Installing exa the mordern 'ls'"
-
-    # [Rust]
-    if ! command -v cargo &> /dev/null; then
-        echo "Cargo could not be found.. Installing Cargo"
-    
-        # Install rust and cargo
-        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    fi
-
-    cargo install exa
 fi
 
 # [bash]
