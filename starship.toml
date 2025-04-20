@@ -100,7 +100,9 @@ disabled = false
 
 [memory_usage]
 disabled = false
+threshold = -1
 symbol = "💽"
+style = 'bold dimmed green'
 format = "MEM: $symbol [($ram_pct) $ram]($style)"
 
 [shell]
