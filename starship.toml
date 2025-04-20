@@ -41,6 +41,14 @@ success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set
 # A continuation prompt that displays two filled in arrows
 continuation_prompt = '▶▶ '
 
+# Custom
+[custom.cpu]
+description = "Show CPU usage"
+command = "grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage \"%\"}'"
+when = "true"
+style = "bright-yellow bold"
+format = " CPU: [$output]($style) "
+
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
 [username]
